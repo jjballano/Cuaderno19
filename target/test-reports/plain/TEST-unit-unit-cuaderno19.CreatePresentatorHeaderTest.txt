@@ -1,0 +1,73 @@
+Testsuite: cuaderno19.CreatePresentatorHeaderTest
+Tests run: 22, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
+------------- Standard Output ---------------
+--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_be_162_characters_length--
+--Output from should_start_with_with_5180--
+--Output from should_has_a_date_when_file_was_built_between_17th_and_22th_position--
+--Output from should_has_empty_between_23th_and_28th_position--
+--Output from should_has_presentator_name_between_29th_and_68th_position--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_cut_the_presentator_name_with_more_than_40_chars--
+--Output from should_has_empty_between_69th_and_88th_position--
+--Output from should_has_a_entity_receptor_number_between_89th_and_92th_position--
+--Output from should_throw_an_exception_if_entity_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_entity_receptor_has_less_than_4_chars--
+--Output from should_has_a_office_receptor_number_between_93th_and_96th_position--
+--Output from should_throw_an_exception_if_office_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_office_receptor_has_less_than_4_chars--
+--Output from should_has_empty_between_97th_and_162th_position--
+--Output from should_allow_put_all_parameters_together--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_be_162_characters_length--
+--Output from should_start_with_with_5180--
+--Output from should_has_a_date_when_file_was_built_between_17th_and_22th_position--
+--Output from should_has_empty_between_23th_and_28th_position--
+--Output from should_has_presentator_name_between_29th_and_68th_position--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_cut_the_presentator_name_with_more_than_40_chars--
+--Output from should_has_empty_between_69th_and_88th_position--
+--Output from should_has_a_entity_receptor_number_between_89th_and_92th_position--
+--Output from should_throw_an_exception_if_entity_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_entity_receptor_has_less_than_4_chars--
+--Output from should_has_a_office_receptor_number_between_93th_and_96th_position--
+--Output from should_throw_an_exception_if_office_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_office_receptor_has_less_than_4_chars--
+--Output from should_has_empty_between_97th_and_162th_position--
+--Output from should_allow_put_all_parameters_together--
+------------- ---------------- ---------------
+
+Testcase: should_has_a_nif_between_5th_and_13th_position took 0.018 sec
+Testcase: nif_should_not_be_empty took 0 sec
+Testcase: should_throw_an_exception_if_nif_has_more_than_9_chars took 0 sec
+Testcase: should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9 took 0.015 sec
+Testcase: should_has_a_sufix_between_14th_and_16th_position took 0.001 sec
+Testcase: should_be_162_characters_length took 0.001 sec
+Testcase: should_start_with_with_5180 took 0.002 sec
+Testcase: should_has_a_date_when_file_was_built_between_17th_and_22th_position took 0.004 sec
+Testcase: should_has_empty_between_23th_and_28th_position took 0.002 sec
+Testcase: should_has_presentator_name_between_29th_and_68th_position took 0.001 sec
+Testcase: should_has_to_change_to_uppercase_the_name took 0.002 sec
+Testcase: should_has_to_remove_every_accent_in_the_name took 0.002 sec
+Testcase: should_cut_the_presentator_name_with_more_than_40_chars took 0.001 sec
+Testcase: should_has_empty_between_69th_and_88th_position took 0.002 sec
+Testcase: should_has_a_entity_receptor_number_between_89th_and_92th_position took 0.005 sec
+Testcase: should_throw_an_exception_if_entity_receptor_has_more_than_4_chars took 0.002 sec
+Testcase: should_throw_an_exception_if_entity_receptor_has_less_than_4_chars took 0.01 sec
+Testcase: should_has_a_office_receptor_number_between_93th_and_96th_position took 0.006 sec
+Testcase: should_throw_an_exception_if_office_receptor_has_more_than_4_chars took 0.001 sec
+Testcase: should_throw_an_exception_if_office_receptor_has_less_than_4_chars took 0.01 sec
+Testcase: should_has_empty_between_97th_and_162th_position took 0.001 sec
+Testcase: should_allow_put_all_parameters_together took 0.001 sec

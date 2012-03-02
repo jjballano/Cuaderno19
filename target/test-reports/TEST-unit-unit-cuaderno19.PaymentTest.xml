@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="jjballano.local" name="cuaderno19.PaymentTest" tests="24" time="0.035" timestamp="2012-03-01T14:50:48">
+  <properties />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_nif_between_5th_and_13th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="nif_should_not_be_empty" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_throw_an_exception_if_nif_has_more_than_9_chars" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_sufix_between_14th_and_16th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_throw_an_expcetion_if_account_number_has_less_than_20_chars" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_throw_an_expcetion_if_account_number_has_more_than_20_chars" time="0.0010" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_be_162_characters_length" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_to_change_to_uppercase_the_name" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_to_remove_every_accent_in_the_name" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_receive_every_amount_with_two_decimals_and_remove_the_dot" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_add_two_zeros_on_the_right_if_amount_has_not_decimal_dot" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_start_with_with_5680" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_reference_code_between_17th_and_28th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_nominal_name_between_29th_and_68th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_cut_the_name_with_more_than_40_chars" time="0.0010" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_an_account_number_between_69th_and_88th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_an_amount_between_89th_and_98th_position_filled_with_zero_left" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_empty_between_99th_and_114th_position" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_a_concept_between_115th_and_154th_position" time="0.0010" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_to_change_to_uppercase_the_concept" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_to_remove_every_accent_in_the_concept" time="0.0" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_cut_the_concept_with_more_than_40_chars" time="0.0010" />
+  <testcase classname="cuaderno19.PaymentTest" name="should_has_empty_between_155th_and_162th_position" time="0.0" />
+  <system-out><![CDATA[--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_throw_an_expcetion_if_account_number_has_less_than_20_chars--
+--Output from should_throw_an_expcetion_if_account_number_has_more_than_20_chars--
+--Output from should_be_162_characters_length--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_receive_every_amount_with_two_decimals_and_remove_the_dot--
+--Output from should_add_two_zeros_on_the_right_if_amount_has_not_decimal_dot--
+--Output from should_start_with_with_5680--
+--Output from should_has_a_reference_code_between_17th_and_28th_position--
+--Output from should_has_a_nominal_name_between_29th_and_68th_position--
+--Output from should_cut_the_name_with_more_than_40_chars--
+--Output from should_has_an_account_number_between_69th_and_88th_position--
+--Output from should_has_an_amount_between_89th_and_98th_position_filled_with_zero_left--
+--Output from should_has_empty_between_99th_and_114th_position--
+--Output from should_has_a_concept_between_115th_and_154th_position--
+--Output from should_has_to_change_to_uppercase_the_concept--
+--Output from should_has_to_remove_every_accent_in_the_concept--
+--Output from should_cut_the_concept_with_more_than_40_chars--
+--Output from should_has_empty_between_155th_and_162th_position--
+]]></system-out>
+  <system-err><![CDATA[--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_throw_an_expcetion_if_account_number_has_less_than_20_chars--
+--Output from should_throw_an_expcetion_if_account_number_has_more_than_20_chars--
+--Output from should_be_162_characters_length--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_receive_every_amount_with_two_decimals_and_remove_the_dot--
+--Output from should_add_two_zeros_on_the_right_if_amount_has_not_decimal_dot--
+--Output from should_start_with_with_5680--
+--Output from should_has_a_reference_code_between_17th_and_28th_position--
+--Output from should_has_a_nominal_name_between_29th_and_68th_position--
+--Output from should_cut_the_name_with_more_than_40_chars--
+--Output from should_has_an_account_number_between_69th_and_88th_position--
+--Output from should_has_an_amount_between_89th_and_98th_position_filled_with_zero_left--
+--Output from should_has_empty_between_99th_and_114th_position--
+--Output from should_has_a_concept_between_115th_and_154th_position--
+--Output from should_has_to_change_to_uppercase_the_concept--
+--Output from should_has_to_remove_every_accent_in_the_concept--
+--Output from should_cut_the_concept_with_more_than_40_chars--
+--Output from should_has_empty_between_155th_and_162th_position--
+]]></system-err>
+</testsuite>

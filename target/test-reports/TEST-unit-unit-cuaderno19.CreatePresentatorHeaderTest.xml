@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="jjballano.local" name="cuaderno19.CreatePresentatorHeaderTest" tests="22" time="0.129" timestamp="2012-03-01T14:50:47">
+  <properties />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_nif_between_5th_and_13th_position" time="0.018" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="nif_should_not_be_empty" time="0.0" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_throw_an_exception_if_nif_has_more_than_9_chars" time="0.0" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9" time="0.015" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_sufix_between_14th_and_16th_position" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_be_162_characters_length" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_start_with_with_5180" time="0.0020" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_date_when_file_was_built_between_17th_and_22th_position" time="0.0040" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_empty_between_23th_and_28th_position" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_presentator_name_between_29th_and_68th_position" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_to_change_to_uppercase_the_name" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_to_remove_every_accent_in_the_name" time="0.0020" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_cut_the_presentator_name_with_more_than_40_chars" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_empty_between_69th_and_88th_position" time="0.0020" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_entity_receptor_number_between_89th_and_92th_position" time="0.0050" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_throw_an_exception_if_entity_receptor_has_more_than_4_chars" time="0.0020" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_throw_an_exception_if_entity_receptor_has_less_than_4_chars" time="0.01" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_a_office_receptor_number_between_93th_and_96th_position" time="0.0060" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_throw_an_exception_if_office_receptor_has_more_than_4_chars" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_throw_an_exception_if_office_receptor_has_less_than_4_chars" time="0.0090" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_has_empty_between_97th_and_162th_position" time="0.0010" />
+  <testcase classname="cuaderno19.CreatePresentatorHeaderTest" name="should_allow_put_all_parameters_together" time="0.0010" />
+  <system-out><![CDATA[--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_be_162_characters_length--
+--Output from should_start_with_with_5180--
+--Output from should_has_a_date_when_file_was_built_between_17th_and_22th_position--
+--Output from should_has_empty_between_23th_and_28th_position--
+--Output from should_has_presentator_name_between_29th_and_68th_position--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_cut_the_presentator_name_with_more_than_40_chars--
+--Output from should_has_empty_between_69th_and_88th_position--
+--Output from should_has_a_entity_receptor_number_between_89th_and_92th_position--
+--Output from should_throw_an_exception_if_entity_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_entity_receptor_has_less_than_4_chars--
+--Output from should_has_a_office_receptor_number_between_93th_and_96th_position--
+--Output from should_throw_an_exception_if_office_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_office_receptor_has_less_than_4_chars--
+--Output from should_has_empty_between_97th_and_162th_position--
+--Output from should_allow_put_all_parameters_together--
+]]></system-out>
+  <system-err><![CDATA[--Output from should_has_a_nif_between_5th_and_13th_position--
+--Output from nif_should_not_be_empty--
+--Output from should_throw_an_exception_if_nif_has_more_than_9_chars--
+--Output from should_has_a_nif_with_9_chars_filling_with_0_left_positions_until_9--
+--Output from should_has_a_sufix_between_14th_and_16th_position--
+--Output from should_be_162_characters_length--
+--Output from should_start_with_with_5180--
+--Output from should_has_a_date_when_file_was_built_between_17th_and_22th_position--
+--Output from should_has_empty_between_23th_and_28th_position--
+--Output from should_has_presentator_name_between_29th_and_68th_position--
+--Output from should_has_to_change_to_uppercase_the_name--
+--Output from should_has_to_remove_every_accent_in_the_name--
+--Output from should_cut_the_presentator_name_with_more_than_40_chars--
+--Output from should_has_empty_between_69th_and_88th_position--
+--Output from should_has_a_entity_receptor_number_between_89th_and_92th_position--
+--Output from should_throw_an_exception_if_entity_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_entity_receptor_has_less_than_4_chars--
+--Output from should_has_a_office_receptor_number_between_93th_and_96th_position--
+--Output from should_throw_an_exception_if_office_receptor_has_more_than_4_chars--
+--Output from should_throw_an_exception_if_office_receptor_has_less_than_4_chars--
+--Output from should_has_empty_between_97th_and_162th_position--
+--Output from should_allow_put_all_parameters_together--
+]]></system-err>
+</testsuite>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="jjballano.local" name="cuaderno19.Cuaderno19Test" tests="14" time="1.014" timestamp="2012-03-01T14:50:47">
+  <properties />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_presentator_header_at_the_begging_of_the_text" time="0.114" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_issuer_header_between_163rd_and_324th_position" time="0.0060" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_total_issuer_record_between_325th_and_486th_position_if_it_does_not_have_any_payment" time="0.0050" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_main_total_record_between_487th_and_648th_position_if_it_does_not_have_any_payment" time="0.0050" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="it_is_possible_to_add_one_payment_and_it_should_be_between_325th_and_486th_position" time="0.73" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_total_issuer_record_between_487th_and_648th_position_if_it_has_one_payment" time="0.012" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_total_issuer_with_a_field_with_the_sum_of_all_of_its_payments_amounts" time="0.045" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_payments" time="0.0090" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_registries_including_payments" time="0.022" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_main_total_record_between_649th_and_810th_position_if_it_does_not_have_any_payment" time="0.0030" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_main_total_with_a_field_with_the_sum_of_all_payments_amounts" time="0.011" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_main_total_with_a_field_with_the_number_of_payments" time="0.0020" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_have_a_main_total_with_the_number_of_registries_in_the_file" time="0.025" />
+  <testcase classname="cuaderno19.Cuaderno19Test" name="should_allow_create_two_payments" time="0.0040" />
+  <system-out><![CDATA[--Output from should_have_a_presentator_header_at_the_begging_of_the_text--
+--Output from should_have_a_issuer_header_between_163rd_and_324th_position--
+--Output from should_have_a_total_issuer_record_between_325th_and_486th_position_if_it_does_not_have_any_payment--
+--Output from should_have_a_main_total_record_between_487th_and_648th_position_if_it_does_not_have_any_payment--
+--Output from it_is_possible_to_add_one_payment_and_it_should_be_between_325th_and_486th_position--
+--Output from should_have_a_total_issuer_record_between_487th_and_648th_position_if_it_has_one_payment--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_all_of_its_payments_amounts--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_payments--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_registries_including_payments--
+--Output from should_have_a_main_total_record_between_649th_and_810th_position_if_it_does_not_have_any_payment--
+--Output from should_have_a_main_total_with_a_field_with_the_sum_of_all_payments_amounts--
+--Output from should_have_a_main_total_with_a_field_with_the_number_of_payments--
+--Output from should_have_a_main_total_with_the_number_of_registries_in_the_file--
+--Output from should_allow_create_two_payments--
+]]></system-out>
+  <system-err><![CDATA[--Output from should_have_a_presentator_header_at_the_begging_of_the_text--
+--Output from should_have_a_issuer_header_between_163rd_and_324th_position--
+--Output from should_have_a_total_issuer_record_between_325th_and_486th_position_if_it_does_not_have_any_payment--
+--Output from should_have_a_main_total_record_between_487th_and_648th_position_if_it_does_not_have_any_payment--
+--Output from it_is_possible_to_add_one_payment_and_it_should_be_between_325th_and_486th_position--
+--Output from should_have_a_total_issuer_record_between_487th_and_648th_position_if_it_has_one_payment--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_all_of_its_payments_amounts--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_payments--
+--Output from should_have_a_total_issuer_with_a_field_with_the_sum_of_its_number_of_registries_including_payments--
+--Output from should_have_a_main_total_record_between_649th_and_810th_position_if_it_does_not_have_any_payment--
+--Output from should_have_a_main_total_with_a_field_with_the_sum_of_all_payments_amounts--
+--Output from should_have_a_main_total_with_a_field_with_the_number_of_payments--
+--Output from should_have_a_main_total_with_the_number_of_registries_in_the_file--
+--Output from should_allow_create_two_payments--
+]]></system-err>
+</testsuite>
