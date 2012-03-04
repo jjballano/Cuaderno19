@@ -10,7 +10,8 @@ import cuaderno19.Cuaderno19;
 
 class Cuaderno19Test {
 
-	static final String REFERENCE_CODE = "000000012345"
+	static final String REFERENCE_CODE_COMPLETE = "000000012345"
+	static final String REFERENCE_CODE_6_CHARS = "012345"
 
 	static final String DEFAULT_NIF = "123456789"
 
@@ -76,14 +77,15 @@ class Cuaderno19Test {
 				  .withAccountNumber("12345678001234567890")
 				  .withChargeDate(new Date())
 
-		cuaderno19.newPaymentOfIssuer("987654321").withName("Lucía Sánchez de la Rosa")
-												  .withCCC("21324354657687980987")
-												  .withAmount(125.30)
-												  .withConcept("A new concept")
-												  .withReferenceCode(REFERENCE_CODE)
-												  .generate()
+		cuaderno19.newPaymentOfIssuer().withName("Lucía Sánchez de la Rosa")
+									   .withCCC("21324354657687980987")
+									   .withAmount(125.30)
+									   .withConcept("A new concept")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
 		def payment = cuaderno19.generate().substring(324,486)
-		assertThat payment, is ("5680987654321000"+REFERENCE_CODE+"LUCIA SANCHEZ DE LA ROSA"+spaces(16)+"21324354657687980987"+"0000012530"+spaces(16)+"A NEW CONCEPT"+spaces(27)+spaces(8))
+		def today = new Date().format("ddMMyyyy")
+		assertThat payment, is ("5680987654321000"+REFERENCE_CODE_COMPLETE+"LUCIA SANCHEZ DE LA ROSA"+spaces(16)+"21324354657687980987"+"0000012530"+REFERENCE_CODE_6_CHARS+"00"+today+"A NEW CONCEPT"+spaces(27)+spaces(8))
 	}
 	
 	@Test void should_have_a_total_issuer_record_between_487th_and_648th_position_if_it_has_one_payment(){
@@ -177,26 +179,103 @@ class Cuaderno19Test {
 				  .withAccountNumber("12345678001234567890")
 				  .withChargeDate(new Date())
 				  
-		cuaderno19.newPaymentOfIssuer("987654321").withName("Lucía Sánchez de la Rosa")
-												  .withCCC("21354242146782748987")
-												  .withAmount(10023.25)
-												  .withConcept("A new concept")
-												  .withReferenceCode(REFERENCE_CODE)
-												  .generate()
-				  .newPaymentOfIssuer("987654321").withName("Carlos García de Marcos")
-												  .withCCC("21324354657687980987")
-												  .withAmount(800)
-												  .withConcept("A new concept 2")
-												  .withReferenceCode(REFERENCE_CODE)
-												  .generate()
+		cuaderno19.newPaymentOfIssuer().withName("Lucía Sánchez de la Rosa")
+									   .withCCC("21354242146782748987")
+									   .withAmount(10023.25)
+									   .withConcept("A new concept")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Carlos García de Marcos")
+									   .withCCC("31324354657687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
 		def file = cuaderno19.generate()
+		def today = new Date().format("ddMMyyyy")
 		def firstPayment = file.substring(324,486)
-		assertThat firstPayment, is ("5680987654321000"+REFERENCE_CODE+"LUCIA SANCHEZ DE LA ROSA"+spaces(16)+"21354242146782748987"+"0001002325"+spaces(16)+"A NEW CONCEPT"+spaces(27)+spaces(8))
+		assertThat firstPayment, is ("5680987654321000"+REFERENCE_CODE_COMPLETE+"LUCIA SANCHEZ DE LA ROSA"+spaces(16)+"21354242146782748987"+"0001002325"+REFERENCE_CODE_6_CHARS+"00"+today+"A NEW CONCEPT"+spaces(27)+spaces(8))
 		def secondPayment = file.substring(486,648)
-		assertThat secondPayment, is ("5680987654321000"+REFERENCE_CODE+"CARLOS GARCIA DE MARCOS"+spaces(17)+"21324354657687980987"+"0000080000"+spaces(16)+"A NEW CONCEPT 2"+spaces(25)+spaces(8))
+		assertThat secondPayment, is ("5680987654321000"+REFERENCE_CODE_COMPLETE+"CARLOS GARCIA DE MARCOS"+spaces(17)+"31324354657687980987"+"0000080000"+REFERENCE_CODE_6_CHARS+"00"+today+"A NEW CONCEPT 2"+spaces(25)+spaces(8))
 		
 	}
 	
+	@Test void should_order_payments_by_entity_office_and_reference_code(){
+		addDefaultParametersToPresentatorHeader()
+		cuaderno19.withIssuerNif("987654321")
+				  .withIssuerName("Sender name")
+				  .withAccountNumber("12345678001234567890")
+				  .withChargeDate(new Date())
+				  
+		cuaderno19.newPaymentOfIssuer().withName("Sixth payment")
+									   .withCCC("11112222146782748987")
+									   .withAmount(10023.25)
+									   .withConcept("A new concept")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Third payment")
+									   .withCCC("01112222657687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Fifth payment")
+									   .withCCC("10112222657687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Second payment")
+									   .withCCC("01112222657687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode("002345")
+									   .generate()
+				  .newPaymentOfIssuer().withName("Forth Payment")
+									   .withCCC("01112222657687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode("912345")
+									   .generate()
+				  .newPaymentOfIssuer().withName("First payment")
+									   .withCCC("01112221007687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Last payment")
+									   .withCCC("21112221007687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
+				  .newPaymentOfIssuer().withName("Seventh payment")
+									   .withCCC("21112221007687980987")
+									   .withAmount(800)
+									   .withConcept("A new concept 2")
+									   .withReferenceCode("000111")
+									   .generate()
+		def file = cuaderno19.generate()
+		def today = new Date().format("ddMMyyyy")
+		def firstPayment = file.substring(324,486)
+		assertTrue firstPayment.contains("FIRST")
+		def secondPayment = file.substring(486,648)
+		assertTrue secondPayment.contains ("SECOND")
+		def thirdPayment = file.substring(648,810)
+		assertTrue thirdPayment.contains ("THIRD")
+		def forthPayment = file.substring(810,972)
+		assertTrue forthPayment.contains ("FORTH")
+		def fifthPayment = file.substring(972,1134)
+		assertTrue fifthPayment.contains ("FIFTH")
+		def sixthPayment = file.substring(1134,1296)
+		assertTrue sixthPayment.contains ("SIXTH")
+		def seventhPayment = file.substring(1296,1468)
+		assertTrue seventhPayment.contains ("SEVENTH")
+		def lastPayment = file.substring(1486,1648)
+		assertTrue lastPayment.contains ("LAST")
+
+	}
+
 	private tomorrow(){
 		new Date() + 1
 	}
@@ -216,12 +295,12 @@ class Cuaderno19Test {
 	}
 	
 	private addDefaultPaymentOf(amount){
-		cuaderno19.newPaymentOfIssuer(DEFAULT_NIF).withName("Lucía Sánchez de la Rosa")
-												  .withCCC("21324354657687980987")
-												  .withAmount(amount)
-												  .withConcept("A new concept")
-												  .withReferenceCode(REFERENCE_CODE)
-												  .generate()
+		cuaderno19.newPaymentOfIssuer().withName("Lucía Sánchez de la Rosa")
+									   .withCCC("21324354657687980987")
+									   .withAmount(amount)
+									   .withConcept("A new concept")
+									   .withReferenceCode(REFERENCE_CODE_6_CHARS)
+									   .generate()
 	}
 	
 	private spaces(number){

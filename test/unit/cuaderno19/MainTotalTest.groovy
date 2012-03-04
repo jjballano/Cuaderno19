@@ -143,5 +143,15 @@ class MainTotalTest {
 		def emptyStructure = structure.create()
 		assertThat emptyStructure.size(), is(162)
 	}
+	
+	@Test void should_allow_put_all_parameters_together(){
+		def chars = structure.withNif("123456789")
+						  .withNumberOfIssuers(5)
+						  .withTotalAmount(1267)
+						  .withNumberOfIndividualRegistries(25)
+						  .withNumberOfTotalRegistries(36)
+						  .create()
+		assertThat chars, is ("5980123456789000                                                    0005                0000126700      00000000250000000036                                      ");
+	}
 
 }

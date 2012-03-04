@@ -7,12 +7,13 @@ class Cuaderno19 {
 	private totalIssuer = new TotalIssuer()
 	private mainTotal = new MainTotal()
 	private payment = null
-	private issuerPayment = []
+	private issuerPayment = new ArrayList()
 	private totalIssuerAmount = 0
 	private numberOfIssuerRegistries = 2
+	private issuerNif
 	
-	def newPaymentOfIssuer(nif){
-		return new IssuerPayment(issuer:nif, cuaderno19: this)
+	def newPaymentOfIssuer(){
+		return new IssuerPayment(issuer:issuerNif, cuaderno19: this)
 	}
 	
 	def withPresentatorNif(nif){
@@ -37,6 +38,7 @@ class Cuaderno19 {
 	}
 	
 	def withIssuerNif(nif){
+		issuerNif = nif
  		issuerHeader.withNif(nif)
 		totalIssuer.withNif(nif)
 		return this
@@ -67,9 +69,12 @@ class Cuaderno19 {
 
 	def payments(){
 		def payments = new StringBuilder()
+		issuerPayment.sort(true){one, other ->
+			one.accountNumber[0..7] != other.accountNumber[0..7]? one.accountNumber[0..7] <=> other.accountNumber[0..7] : one.referenceCode <=> other.referenceCode
+		}
 		for (payment in issuerPayment){
 			numberOfIssuerRegistries++
-			payments.append(payment)
+			payments.append(payment.create())
 		}
 		return payments
 	}	
@@ -89,7 +94,7 @@ class Cuaderno19 {
 	}
 	
 	def addPayment(payment){
-		issuerPayment.add(payment.create())
+		issuerPayment.add(payment)
 		return this
 	}
 	

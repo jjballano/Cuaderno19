@@ -7,7 +7,8 @@ class Payment extends Cuaderno19Structure {
 	private static final REGISTER_CODE = "5680"
 	private static final ZONE_B2_REFERENCE_CODE_SIZE = 12
 	private static final ZONE_E_SIZE = 10
-	private static final ZONE_F_SIZE = 16
+	private static final ZONE_F1_RETURN_CODE_SIZE = 6
+	private static final ZONE_F2_INTERNAL_REFERENCE_SIZE = 10
 	private static final ZONE_G_SIZE = 40
 	private static final ZONE_H_SIZE = 8
 	
@@ -44,7 +45,8 @@ class Payment extends Cuaderno19Structure {
 							  .append(name())
 							  .append(accountNumber())
 							  .append(amount())
-							  .append(emptyFieldOfSize(ZONE_F_SIZE))
+							  .append(returnCode())
+							  .append(internalReference())
 							  .append(concept())
 							  .append(emptyFieldOfSize(ZONE_H_SIZE))
 							  .toString()
@@ -52,6 +54,14 @@ class Payment extends Cuaderno19Structure {
 
 	private referenceCode(){
 		valueFilledWithZeros(referenceCode, ZONE_B2_REFERENCE_CODE_SIZE)
+	}
+
+	private returnCode(){
+		valueFilledWithZeros(referenceCode, ZONE_F1_RETURN_CODE_SIZE)
+	}
+
+	private internalReference(){
+		valueFilledWithZeros(new Date().format("ddMMyyyy"), ZONE_F2_INTERNAL_REFERENCE_SIZE)
 	}
 	
 	private accountNumber(){

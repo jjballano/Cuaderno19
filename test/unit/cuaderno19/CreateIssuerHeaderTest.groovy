@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
-class CreateIssuerHeaderTest {
+class CreateIssuerHeaderTest{
 
 	def header
 	

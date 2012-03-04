@@ -61,10 +61,10 @@ class PaymentTest {
 	}
 	
 	@Test void should_has_a_reference_code_between_17th_and_28th_position(){
-		def chars = payment.withReferenceCode("1234567")
+		def chars = payment.withReferenceCode("123456")
 						   .create()
 						   .substring(16, 28)
-		assertThat chars, is("000001234567")
+		assertThat chars, is("000000123456")
 	}
 	
 	@Test void should_has_a_nominal_name_between_29th_and_68th_position(){
@@ -147,12 +147,18 @@ class PaymentTest {
 		assertThat chars, is("0000034500")
 	}
 	
-	@Test void should_has_empty_between_99th_and_114th_position(){
+	@Test void should_has_the_same_as_reference_code_between_99th_and_104th_position(){
+		def chars = payment.withReferenceCode("123456")
+						   .create()
+						   .substring(98, 104)
+		assertThat chars, is("123456")
+	}
+	
+	@Test void should_has_the_current_date_as_internal_reference_between_105th_and_114th_position(){
 		def chars = payment.create()
-						  .substring(98, 114)
-		
-		assertThat chars.size(), is(16)
-		assertThat chars.trim(), is("")
+						   .substring(104, 114)
+		def today = new Date().format("ddMMyyyy")				   
+		assertThat chars, is("00"+today)
 	}
 
 	@Test void should_has_a_concept_between_115th_and_154th_position(){
@@ -204,5 +210,16 @@ class PaymentTest {
 		def emptyStructure = payment.create()
 		assertThat emptyStructure.size(), is(162)
 	}
-
+	
+	@Test void should_allow_put_all_parameters_together(){
+		def chars = payment.withNif("123456789")
+						  .withReferenceCode("123456")
+						  .withConcept("A Concept")
+						  .withAmount(345.65)
+						  .withName("Name and family name")
+						  .withAccountNumber("12345678900987654321")
+						  .create()
+		def today = new Date().format("ddMMyyyy")
+		assertThat chars, is ("5680123456789000000000123456NAME AND FAMILY NAME                    12345678900987654321000003456512345600"+today+"A CONCEPT                                       ");
+	}
 }
