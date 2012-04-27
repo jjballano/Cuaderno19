@@ -60,11 +60,11 @@ class Cuaderno19 {
 	}
 	
 	def generate(){
-		new StringBuilder().append(presentatorHeader.create())
-						   .append(issuerHeader.create())
+		new StringBuilder().append(presentatorHeader.create()).append("\n")
+						   .append(issuerHeader.create()).append("\n")
 						   .append(payments())
-						   .append(totalIssuer().create())
-						   .append(mainTotal().create())
+						   .append(totalIssuer().create()).append("\n")
+						   .append(mainTotal().create()).append("\n")
 	}
 
 	def payments(){
@@ -74,7 +74,7 @@ class Cuaderno19 {
 		}
 		for (payment in issuerPayment){
 			numberOfIssuerRegistries++
-			payments.append(payment.create())
+			payments.append(payment.create()).append("\n")
 		}
 		return payments
 	}	
