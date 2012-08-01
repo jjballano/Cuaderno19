@@ -1,20 +1,16 @@
 # Cuaderno19 plugin for Grails
 
-### Author
- - [Jesús J. Ballano](http://twitter.com/jjballano) - jjballano@gmail.com
+## Author
+ - Jesús J. Ballano
 
-### Company
- - [BeCodeMyFriend](http://becodemyfriend.com)
-
-## Description
+## Company
+ - BeCodeMyFriend http://becodemyfriend.com
 
 Cuaderno19 is a file needed to order a payment to a bank in Spain. It can be done very easy with this plugin.
 
 It just makes a simple Cuaderno19, but it can be completed so easy.
 
 Grails version is 2.0 or later. It is not tested on previous versions
-
-##Learn how to use it
 
 This is an example to create a Cuaderno19:
 
@@ -45,5 +41,5 @@ This is a text file with the structure defined in Cuaderno19.pdf (in Spanish) in
 
 ## Support
 
-Please log issues in the [github repository](https://github.com/jjballano/Cuaderno19/issues)
+Please log issues in the github repository at https://github.com/jjballano/Cuaderno19/issues  
 Pull requests with improvements and bug fixes are welcome.
