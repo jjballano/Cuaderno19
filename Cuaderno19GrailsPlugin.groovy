@@ -1,5 +1,5 @@
 class Cuaderno19GrailsPlugin {
-    def version = "0.1"
+    def version = "1.0"
     def grailsVersion = "1.3.6 > *"
     def dependsOn = [:]
     def pluginExcludes = [
@@ -10,10 +10,12 @@ class Cuaderno19GrailsPlugin {
     def author = "Jesús J. Ballano"
     def authorEmail = "jjballano@gmail.com"
     def description = '''\
-Ayuda a la generación del Cuaderno19 necesario para la domiciliación de recibos en España.
+Cuaderno19 is a file needed to order a payment to a bank in Spain. \
+It can be done very easy with this plugin.\
+It just makes a simple Cuaderno19, but it can be completed so easy
 '''
 
-    def documentation = "http://grails.org/plugin/cuaderno19"
+    def documentation = "https://github.com/jjballano/Cuaderno19/blob/master/README"
 
     def license = "APACHE"
 
