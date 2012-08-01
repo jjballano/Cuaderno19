@@ -1,0 +1,41 @@
+<plugin name='cuaderno19' version='0.1' grailsVersion='2.0.0 &gt; *'>
+  <author>Jesús J. Ballano</author>
+  <authorEmail>jjballano@gmail.com</authorEmail>
+  <title>Cuaderno19 Plugin</title>
+  <description>Ayuda a la generación del Cuaderno19 necesario para la domiciliación de recibos en España.
+</description>
+  <documentation>http://grails.org/plugin/cuaderno19</documentation>
+  <type>Cuaderno19GrailsPlugin</type>
+  <resources />
+  <repositories>
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='jexcelapi' name='jxl' version='2.6' />
+    </compile>
+    <runtime>
+      <dependency group='postgresql' name='postgresql' version='8.4-702.jdbc3' />
+      <dependency group='mysql' name='mysql-connector-java' version='5.1.16' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <compile>
+      <plugin group='org.grails.plugins' name='heroku' version='1.0' />
+    </compile>
+    <runtime>
+      <plugin group='org.grails.plugins' name='hibernate' version='2.0.0' />
+      <plugin group='org.grails.plugins' name='resources' version='1.1.5' />
+      <plugin group='org.grails.plugins' name='jquery' version='1.7.1' />
+    </runtime>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.0.0' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
