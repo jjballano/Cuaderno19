@@ -1,18 +1,20 @@
 # Cuaderno19 plugin for Grails
 
-## Author
+### Author
  - Jesús J. Ballano <jjballano@gmail.com>
 
-## Company
+### Company
  - <a href="http://becodemyfriend.com">BeCodeMyFriend</a>
 
+## Description 
 Cuaderno19 is a file needed to order a payment to a bank in Spain. It can be done very easy with this plugin.
 
 It just makes a simple Cuaderno19, but it can be completed so easy.
 
 Grails version is 2.0 or later. It is not tested on previous versions
 
-This is an example to create a Cuaderno19:
+## How to use it
+This is an example to create a Cuaderno19 file:
 
 <pre><code>def cuaderno19 = new Cuaderno19().withPresentatorNif("12345678")
                                  .withPresentatorName("Presentator name")
