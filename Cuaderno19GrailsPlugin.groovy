@@ -13,17 +13,15 @@ class Cuaderno19GrailsPlugin {
     def issueManagement = [ system: "GITHUB", url: "https://github.com/jjballano/Cuaderno19/issues" ]
 
     def description = '''\
-Cuaderno19 is a file needed to order a payment to a bank in Spain. \
-It can be done very easy with this plugin.\
-It just makes a simple Cuaderno19, but it can be completed so easy\
-\
-Grails version is 2.0 or later. It is not tested on previous versions\
+    Cuaderno 19" is a standard electronic document format used by Spanish banks. It is normally used by bank customers to request a recursive payment (domiciliación) from a final customer or client.\
+    This plugin can be used to generate a basic Cuaderno 19 request, but it is very easy to customize it to suit your purposes.\
+    The plugin is compatible with Grails version 2.0 or later and it has not been tested on previous versions.\
 
-The source code is available in https://github.com/jjballano/Cuaderno19. Contributions are welcome
-'''
+    The source code and documentation is available in https://github.com/jjballano/Cuaderno19. Contributions are welcome
+    '''
 
-    def documentation = "https://github.com/jjballano/Cuaderno19/blob/master/README"
+    def documentation = "https://github.com/jjballano/Cuaderno19/blob/master/README.md"
 
-    def license = "APACHE"
+    def license = "Beerware"
 
 }
