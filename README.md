@@ -1,10 +1,10 @@
 # Cuaderno19 plugin for Grails
 
 ## Author
- - Jesús J. Ballano
+ - Jesús J. Ballano <jjballano@gmail.com>
 
 ## Company
- - BeCodeMyFriend http://becodemyfriend.com
+ - <a href="http://becodemyfriend.com">BeCodeMyFriend</a>
 
 Cuaderno19 is a file needed to order a payment to a bank in Spain. It can be done very easy with this plugin.
 
@@ -14,9 +14,9 @@ Grails version is 2.0 or later. It is not tested on previous versions
 
 This is an example to create a Cuaderno19:
 
-def cuaderno19 = new Cuaderno19().withPresentatorNif("12345678")
-								.withPresentatorName("Presentator name")
-								.withReceptorEntity("1234")
+<pre><code>def cuaderno19 = new Cuaderno19().withPresentatorNif("12345678")
+                                 .withPresentatorName("Presentator name")
+                                 .withReceptorEntity("1234")
 								.withReceptorOffice("4567")
 								.withIssuerNif("987654321")
 								.withIssuerName("Sender name")
@@ -35,11 +35,11 @@ def cuaderno19 = new Cuaderno19().withPresentatorNif("12345678")
 													 .withReferenceCode("012345678")
 													 .generate()
 def file = cuaderno19.generate()
+</code></pre>
 
-This is a text file with the structure defined in Cuaderno19.pdf (in Spanish) included in this project in docs folder.
+This is a text file with the structure defined in <a href="https://github.com/jjballano/Cuaderno19/blob/master/docs/Cuaderno19.pdf">Cuaderno19.pdf</a> (in Spanish).
 
 
 ## Support
 
-Please log issues in the github repository at https://github.com/jjballano/Cuaderno19/issues  
-Pull requests with improvements and bug fixes are welcome.
+Please log issues in the <a href="https://github.com/jjballano/Cuaderno19/issues">github repository</a>. Pull requests with improvements and bug fixes are welcome.
